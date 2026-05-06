@@ -2,33 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hope OS</title>
+    <title>HopeOS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="desktop">
+<!-- Desktop -->
+<div id="desktop" class="desktop"></div>
 
-    <div class="app" draggable="true" data-app="HopePlayer">
-        <img src="appcover/hopeplayer.png">
-        <span class="label">HopePlayer</span>
+<!-- Dock -->
+<div id="dock" class="dock"></div>
+
+<!-- Recycle Bin -->
+<div id="recycleBin" class="dock-fixed">
+    <div class="app">
+        <img src="assets/recycle.png">
+        <span class="label">Recycle</span>
     </div>
-
-    <div class="app" draggable="true" data-app="HopeTXT">
-        <img src="appcover/hopetxt.png">
-        <span class="label">HopeTXT</span>
-    </div>
-
 </div>
 
-<div class="dock" id="dock"></div>
-
-<!-- Right click menu -->
-<div id="contextMenu" class="context-menu">
-    <div onclick="favoriteApp()">Favorite</div>
-    <div onclick="unfavoriteApp()">Unfavorite</div>
-    <div onclick="openAppFromMenu()">Open</div>
+<!-- Folder Window -->
+<div id="folderWindow" class="folder-window hidden">
+    <div class="folder-content" id="folderContent"></div>
 </div>
+
+<!-- Context Menu -->
+<div id="contextMenu" class="context-menu"></div>
 
 <script src="script.js"></script>
 </body>
