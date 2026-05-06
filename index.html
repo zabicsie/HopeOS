@@ -2,24 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sky Dock</title>
+    <title>Hope OS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Dock -->
-    <div class="dock">
-        <div class="app" onclick="openApp('HopePlayer')">
-            <img src="appcover/hopeplayer.png" alt="HopePlayer">
-            <span class="label">HopePlayer</span>
-        </div>
+<div class="desktop">
 
-        <div class="app" onclick="openApp('HopeTXT')">
-            <img src="appcover/hopetxt.png" alt="HopeTXT">
-            <span class="label">HopeTXT</span>
-        </div>
+    <div class="app" draggable="true" data-app="HopePlayer">
+        <img src="appcover/hopeplayer.png">
+        <span class="label">HopePlayer</span>
     </div>
 
-    <script src="script.js"></script>
+    <div class="app" draggable="true" data-app="HopeTXT">
+        <img src="appcover/hopetxt.png">
+        <span class="label">HopeTXT</span>
+    </div>
+
+</div>
+
+<div class="dock" id="dock"></div>
+
+<!-- Right click menu -->
+<div id="contextMenu" class="context-menu">
+    <div onclick="favoriteApp()">Favorite</div>
+    <div onclick="unfavoriteApp()">Unfavorite</div>
+    <div onclick="openAppFromMenu()">Open</div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
